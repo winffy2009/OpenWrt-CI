@@ -10,6 +10,15 @@
 name: OpenWrt
 
 on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: '请选择配置'
+        required: true
+        default: X86_64
+        type: choice
+        options:
+          - X86_64
   push:
     branches: 
       - master
